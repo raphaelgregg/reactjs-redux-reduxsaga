@@ -16,6 +16,8 @@ const Cart: React.FC = () => {
           <th>Subtotal</th>
         </tr>
       </thead>
+        
+      <tbody>
         {cart.map(item => (
           <tr key={item.product.id}>
             <td>{item.product.title}</td>
@@ -24,8 +26,6 @@ const Cart: React.FC = () => {
             <td>{(item.product.price * item.quantity).toFixed(2)}</td>
           </tr>
         ))}
-      <tbody>
-
       </tbody>
     </table>
   );
